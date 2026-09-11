@@ -60,7 +60,7 @@ The UI and API suites exercise separate demo applications. They are not presente
 
 See [architecture decisions](docs/architecture.md) for the reasons behind these boundaries and [test strategy](docs/test-strategy.md) for scope and limitations.
 
-The [initial validation record](docs/validation.md) distinguishes passing API checks from the browser matrix that still needs a CI run.
+See the [validation record](docs/validation.md) for the verified source revision, CI results, and review limitations.
 
 ## CI and failure investigation
 
