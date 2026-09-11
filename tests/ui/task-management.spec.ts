@@ -9,7 +9,10 @@ test('active and completed filters reflect changes', async ({ todos }) => {
 
   await todos.filterBy('Completed');
   await expect(todos.titles).toHaveText(['Prepare demo data']);
-  await todos.setCompleted('Prepare demo data', false);
+  const completedTask = todos.item('Prepare demo data').getByRole('checkbox');
+  await expect(completedTask).toBeChecked();
+  // Toggling removes the row from this filter, so assert the resulting list.
+  await completedTask.click();
   await expect(todos.items).toHaveCount(0);
 
   await todos.filterBy('All');
